@@ -1,1 +1,1 @@
-BellasArtes, Escuela1, ColegioSanJose, Escuela3
+BellasArtes , Escuela1 , ColegioSanJose , Escuela3
