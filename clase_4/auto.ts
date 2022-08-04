@@ -14,7 +14,7 @@ export class Auto{
    encenderAuto() {
       if (this.encendido) {
          this.encendido = false;
-         console.log("el auto esta encendido");
+         console.log("el auto esta apagado");
       } else {
          this.encendido = true;
          console.log("el auto esta encendido");
@@ -32,7 +32,7 @@ export class Auto{
    setpasarCambio(cambiar: number) {
       this.cambios = cambiar;
    }
-   
+
 }
 
 
