@@ -1,24 +1,38 @@
-import *as readlineSync from "readline-Sync";
- 
-let realizarCambio="ingrese cambio";
+export class Auto{
+   encendido: boolean;
+   cambios: number;
+   alarma: boolean;
+   vidrios: boolean;
 
-class Auto{
- encendido:boolean=false;
- cambios:number=0;
- alarma:boolean=false;
- vidrios:boolean=false;
+   constructor(alarmaEncendida: boolean, subirBajar: boolean) {
+      this.encendido = false;
+      this.cambios = 0;
+      this.alarma = alarmaEncendida;
+      this.vidrios = subirBajar;
+   }
 
- constructor(encender:boolean,cambiar:number,alarmaEncendida:boolean,subirBajar:boolean){
-    this.encendido=encender;
-    this.cambios=cambiar;
-    this.alarma=alarmaEncendida;
-    this.vidrios=subirBajar;
- }
-encenderAuto():void{
+   encenderAuto() {
+      if (this.encendido) {
+         this.encendido = false;
+         console.log("el auto esta encendido");
+      } else {
+         this.encendido = true;
+         console.log("el auto esta encendido");
+      }
+   }
+
+   pasarCambio() {
+      this.cambios += 1;
+
+   }
+   getCambio():number{
+      return this.cambios;
+   }
+
+   setpasarCambio(cambiar: number) {
+      this.cambios = cambiar;
+   }
    
 }
 
-}
 
-
-    
