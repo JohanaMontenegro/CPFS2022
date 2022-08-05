@@ -12,6 +12,12 @@ class Colegio {
     constructor(nombreColegio: string) {
         this.nombre = nombreColegio;
     }
+    setAlumno(alumno: Alumno[]) {
+        this.alumnos = alumno;
+    }
+    setProfesor(profesor: Profesor[]) {
+        this.profesores=profesor;
+    }
 
     agregarAlumno(alumno: Alumno) {
         this.alumnos.push(alumno);
@@ -20,9 +26,9 @@ class Colegio {
     quitarAlumno(alumno: Alumno) {
         this.alumnos.splice(this.alumnos.indexOf(alumno));
     }
-    modificarAlumno(alumno = Alumno, newAlumno: string) {
+    modificarAlumno(alumno = Alumno) {
         for (let i = 0; i < alumno.length; i++) {
-            alumno[i] = newAlumno = ReadlineSync.question('ingrese los datos del nuevo alumno');
+            alumno[i].setAlumno.ReadlineSync.question('ingrese los datos del nuevo alumno');
         }
     }
 
@@ -34,9 +40,9 @@ class Colegio {
         this.profesores.splice(this.profesores.indexOf(profesor));
     }
 
-    modificarProfesor(profesor = Profesor, newprofesor: string) {
+    modificarProfesor(profesor = Profesor) {
         for (let i = 0; i < profesor.length; i++) {
-            profesor[i] = newprofesor = ReadlineSync.question('ingrese los datos del nuevo profesor');
+            profesor[i].setProfesor.ReadlineSync.question('ingrese los datos del nuevo profesor');
 
         }
 
